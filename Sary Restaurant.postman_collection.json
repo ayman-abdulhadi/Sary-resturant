@@ -1,0 +1,540 @@
+{
+	"info": {
+		"_postman_id": "3c950c4a-e81c-4652-bf5b-62f92fab6324",
+		"name": "Sary Restaurant",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/api/token/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_number",
+							"value": "1234",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "admin",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						""
+					]
+				},
+				"description": "Login API"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/create-user/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTU5OTEwLCJqdGkiOiIwZDgwYjY2MDI1YWU0ZTQxOTE2YWEyNDQ4ZmU2ZWNiMCIsInVzZXJfaWQiOjF9.d7OyjDJoFQCO575Ei3zvRUmCH5Nd8TZ2560_gc9zVks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "employee_number",
+							"value": "4444",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "password",
+							"type": "text"
+						},
+						{
+							"key": "name",
+							"value": "postman",
+							"type": "text"
+						},
+						{
+							"key": "role",
+							"value": "Employee",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/create-user/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"create-user",
+						""
+					]
+				},
+				"description": "Create a new user"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/tables/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTU5OTEwLCJqdGkiOiIwZDgwYjY2MDI1YWU0ZTQxOTE2YWEyNDQ4ZmU2ZWNiMCIsInVzZXJfaWQiOjF9.d7OyjDJoFQCO575Ei3zvRUmCH5Nd8TZ2560_gc9zVks",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tables/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tables",
+						""
+					]
+				},
+				"description": "List all tables"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/token/refresh/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "refresh",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzMTY0NjAxMCwianRpIjoiNTVhMDZmMWIyNGJmNGZiODkzMWY2YTI5NzM4ZGUwMGIiLCJ1c2VyX2lkIjoxfQ.9d1AZgyNWqIDogxhsOZy_F233zJ9rIjSz7FByN4oFUY",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/token/refresh/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"token",
+						"refresh",
+						""
+					]
+				},
+				"description": "Refresh token"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/tables/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTYwMzU4LCJqdGkiOiJhN2NkMDM2MmIxNGM0NzZiOGVlNDUzODFiOWZlOTIyMSIsInVzZXJfaWQiOjF9.5PV_EXbxUVZC1XTg_MGE6GCZcsPwg75NKhlQGwI0r0c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "number",
+							"value": "7777",
+							"type": "text"
+						},
+						{
+							"key": "num_of_seats",
+							"value": "10",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tables/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tables",
+						""
+					]
+				},
+				"description": "Create a new table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/tables/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTYwMzU4LCJqdGkiOiJhN2NkMDM2MmIxNGM0NzZiOGVlNDUzODFiOWZlOTIyMSIsInVzZXJfaWQiOjF9.5PV_EXbxUVZC1XTg_MGE6GCZcsPwg75NKhlQGwI0r0c",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tables/7777/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tables",
+						"7777",
+						""
+					]
+				},
+				"description": "Delete table"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/tables/check-available-slots/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTYwNjg2LCJqdGkiOiI5OTMwODRjNjRmZjI0ZWZlYTM3ZGQ0ZThmYTU1YWI4NiIsInVzZXJfaWQiOjF9.lKfl2U58u4Bk-sTqbjKSh7sFuOMnEF91EcE6oW2pKlQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "num_of_seats",
+							"value": "2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/tables/check-available-slots/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"tables",
+						"check-available-slots",
+						""
+					]
+				},
+				"description": "Check available slots"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/reservations/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTYwNjg2LCJqdGkiOiI5OTMwODRjNjRmZjI0ZWZlYTM3ZGQ0ZThmYTU1YWI4NiIsInVzZXJfaWQiOjF9.lKfl2U58u4Bk-sTqbjKSh7sFuOMnEF91EcE6oW2pKlQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						""
+					]
+				},
+				"description": "List all reservations"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/reservations/today-reservations/",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTYwNjg2LCJqdGkiOiI5OTMwODRjNjRmZjI0ZWZlYTM3ZGQ0ZThmYTU1YWI4NiIsInVzZXJfaWQiOjF9.lKfl2U58u4Bk-sTqbjKSh7sFuOMnEF91EcE6oW2pKlQ",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/today-reservations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"today-reservations",
+						""
+					]
+				},
+				"description": "List today reservations"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/reservations/",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTY2MDQ5LCJqdGkiOiJjZjJiOGJlMzZjMjM0NzJmOTg5MmQ2M2Q4MWFiZTEzMyIsInVzZXJfaWQiOjF9.H6DvB-Kb87hYwfTE46h5WrvJqGnm17FskfpgdNKBn0M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table",
+							"value": "3333",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "03:30 PM",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "05:00 PM",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						""
+					]
+				},
+				"description": "Create a new reservation"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/reservations/8/",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTY2MDQ5LCJqdGkiOiJjZjJiOGJlMzZjMjM0NzJmOTg5MmQ2M2Q4MWFiZTEzMyIsInVzZXJfaWQiOjF9.H6DvB-Kb87hYwfTE46h5WrvJqGnm17FskfpgdNKBn0M",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "table",
+							"value": "3333",
+							"type": "text"
+						},
+						{
+							"key": "start_time",
+							"value": "03:30 PM",
+							"type": "text"
+						},
+						{
+							"key": "end_time",
+							"value": "05:00 PM",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/8/",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						"8",
+						""
+					]
+				},
+				"description": "Delete a reservation"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/reservations/?time_order=asc&table_number=1111&date_range=10-09-2021,13-09-2021",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer  eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjMxNTczODg5LCJqdGkiOiI2ZmFmMTc5ZDVjNGQ0YTE1YTg1YWJkNDFiZTU4MWJhNSIsInVzZXJfaWQiOjF9.F-zThewpFRJC1NhUYPVZI41n5XD0EVTxPAobgAoK4Jo",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/reservations/?time_order=asc&table_number=1111&date_range=10-09-2021,13-09-2021",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"reservations",
+						""
+					],
+					"query": [
+						{
+							"key": "time_order",
+							"value": "asc"
+						},
+						{
+							"key": "time_order",
+							"value": "dsc",
+							"disabled": true
+						},
+						{
+							"key": "table_number",
+							"value": "1111"
+						},
+						{
+							"key": "date_range",
+							"value": "10-09-2021,13-09-2021"
+						}
+					]
+				},
+				"description": "Filter reservations by date_range, time_order and table_number"
+			},
+			"response": []
+		}
+	]
+}

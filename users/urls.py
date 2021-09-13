@@ -6,6 +6,8 @@ from rest_framework_simplejwt.views import (
 from users import views
 
 
+app_name = 'users'
+
 urlpatterns = [
     path('create-user/', views.CreateUserView.as_view(), name='create_user'),
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
